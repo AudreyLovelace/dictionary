@@ -18,7 +18,7 @@ function App(props) {
   function search(event) {
     event.preventDefault();
     setSearchWord(word);
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en_us/${searchWord}`;
     axios.get(url).then(showWord);
   }
   return (

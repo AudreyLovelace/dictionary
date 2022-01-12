@@ -1,21 +1,24 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Section from "./Section";
 import "./App.css";
 
 function App(props) {
-  const [word, setWord] = useState(props.word);
-
+  const [word, setWord] = useState("");
+  const [searchWord, setSearchWord] = useState("");
+  const [dictionary, setDictionary] = useState("");
   function showWord(response) {
+    setDictionary(response.data[0]);
     console.log(response.data[0]);
   }
 
   function changeWord(event) {
-    event.preventDefault();
     setWord(event.target.value);
   }
   function search(event) {
     event.preventDefault();
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    setSearchWord(word);
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(url).then(showWord);
   }
   return (
@@ -31,12 +34,14 @@ function App(props) {
         <form onSubmit={search}>
           <input
             onChange={changeWord}
-            type="text"
+            type="search"
             placeholder="Search for a word"
           ></input>
         </form>
         <small>i.e. paris, wine, yoga, coding</small>
       </header>
+
+      <Section dictionary={dictionary} />
     </div>
   );
 }

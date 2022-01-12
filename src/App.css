@@ -1,7 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   min-width: 350px;
   width: 70%;
-  margin: 0 15%;
+  margin: 0 18% 0 12%;
 }
 
 img {
@@ -11,10 +16,21 @@ img {
 }
 
 .part {
-  width: 80%;
+  width: 100%;
   background-color: white;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgb(231, 231, 231);
-  padding: 20px 40px;
-  margin: 0 auto;
+  padding: 40px;
+}
+
+header input {
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 3px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: grey;
+  outline-color: rgb(177, 204, 235);
+  shape-outside: -2px;
+  padding: 20px;
+  width: 90%;
 }

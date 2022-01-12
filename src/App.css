@@ -1,0 +1,20 @@
+.container {
+  min-width: 350px;
+  width: 70%;
+  margin: 0 15%;
+}
+
+img {
+  display: block;
+  width: 200px;
+  margin: 80px auto 30px auto;
+}
+
+.part {
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(231, 231, 231);
+  padding: 20px 40px;
+  margin: 0 auto;
+}
